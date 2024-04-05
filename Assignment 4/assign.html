@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <script src="style.js" ></script>
+
+    <h1 style="text-align: center;">CALCULATOR</h1>
+    <div class="outerDiv">
+        
+
+            <table style="font-size: 30px; ">
+                <br>
+                <br>
+                <br>
+                <br>
+                <tr>
+                    <td>
+                        NUMBER 1 :
+                    </td>
+                    <td>
+                        <input  type="text" name="num1" id="num1" />
+                    </td>
+                    <td>
+                        <div id="errMsgN1" style="color: red; font-size: small;"></div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        NUMBER 2 :
+                    </td>
+                    <td>
+                        <input type="text" name="num2" id="num2" />
+                    </td>
+                    <td>
+                        <div id="errMsgN2" style="color: red; font-size: small;"></div>
+                    </td>
+
+                </tr>
+                <tr>
+                    <td>
+                        RESULT
+                    </td>
+                    <td>
+                        <input type="text" name="result" id="result">
+                    </td>
+
+                </tr>
+                
+            </table>
+            
+            <div class="lowerDiv">
+                <input type="button" class="btn" onclick="ADD()" value="ADD"/>
+                <input type="button" class="btn" onclick="SUB()" value="SUB"/>
+                <input type="button" class="btn" onclick="MUL()" value="MUL"/>
+                <input type="button" class="btn" onclick="DIV()" value="DIV"/>
+
+            </div>
+
+        
+        
+
+
+
+    </div>
+    
+
+</body>
+
+</html>
