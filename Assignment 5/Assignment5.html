@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="mydiv" style="width: 200px; position: absolute; left: -31px; top: 0px">
+        <img src="car1.jpeg" height:300px; width:200px;>
+        <h2>
+        </h2>
+    </div>
+
+    <div style="
+    height:40px; 
+    width:600px;
+     background-color:black;
+      position:absolute;
+    left:0px; 
+    top:130px;
+    ">
+
+    </div>
+    <br /><br /><br />
+    <br /><br /><br />
+    <br /><br /><br />
+
+    <input type="button" value="Move" onclick="Move()" />
+    <input type="button" value="Stop" onclick="Stop()" />
+    <br /><br />
+    <br /><br />
+    Xaxis <input type="number" name="Xaxis" value="0" id="XID" />
+    <br /><br />
+    Yaxis <input type="number" name="Yaxis" value="0" id="YID" />
+
+
+    <script>
+        var yvalue = 0;
+        var ctop = 0;
+
+        var leftval = -40;
+        var arrayofQueues = new Array();
+        function Move() {
+            var qno = setInterval(KeepMoving, 30);
+            arrayofQueues.push(qno);
+        }
+
+
+
+        function Stop() {
+            for (var i = 0; i < arrayofQueues.length; i++) {
+
+                var qtostop = arrayofQueues[i];
+                clearInterval(qtostop);
+            }
+        }
+
+        function KeepMoving() {
+            if (leftval > 560) {
+                var reftocar = document.getElementById("mydiv");
+                var Y = document.getElementById("YID");
+
+                ctop = ctop + 10;
+                reftocar.style.top = ctop + "px";
+                if (Y.value <= 100) {
+                    Y.value = ctop;
+
+                    if (Y.value == 100) {
+                        for (var i = 0; i < arr.length; i++) {
+                            var qno = arr[i];
+
+                            clearInterval(qno);
+                        }
+                    }
+                }
+            }
+            else {
+                var X = document.getElementById("XID");
+
+                var reftomydiv = document.getElementById("mydiv");
+                if (reftomydiv != null) {
+                    leftval = leftval + 1;
+                    reftomydiv.style.left = leftval + "px";
+
+                    X.value = leftval;
+
+                }
+            }
+           
+        }
+    </script>
+
+</body>
+
+</html>
